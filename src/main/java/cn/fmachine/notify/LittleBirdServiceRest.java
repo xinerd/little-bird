@@ -28,4 +28,11 @@ public class LittleBirdServiceRest {
         Reply reply = eBird.send(spec);
         return new ResponseEntity<>(reply, HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/test", method = RequestMethod.POST, produces = "application/json")
+    public @ResponseBody
+    ResponseEntity<Reply> test(@RequestBody EmailSpec spec) {
+        Reply reply = eBird.send(spec);
+        return new ResponseEntity<>(reply, HttpStatus.OK);
+    }
 }
