@@ -1,0 +1,22 @@
+spring:
+    application:
+        name: little-bird
+
+server:
+  port: 7000
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,application/javascript,application/json
+
+logging:
+  level:
+    root: INFO
+
+email:
+  host: smtp.gmail.com
+  port: 465
+  socketFactoryPort: 465
+  auth: true
+  socketFactoryClass: javax.net.ssl.SSLSocketFactory
+  username: uml.xin.ming@gmail.com
+  password: yourpassword
